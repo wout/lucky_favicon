@@ -87,7 +87,7 @@ head do
   favicon_tags sizes: %w[24x24 64x64 128x128]
   site_webmanifest_tag version: "0.5.3"
   safari_pinned_tab_tag theme_color: "#00ff99"
-  application_name_tags app_name: "My App"
+  application_name_tags app_name: "My Lucky App"
   theme_color_tags theme_color: "#ff0066"
 end
 ```
