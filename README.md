@@ -48,7 +48,7 @@ head do
 end
 ```
 
-This will render your complete set of favicon-related icons:
+This will render a complete set of favicon-related tags:
 
 ```html
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=0.1.0">
@@ -65,30 +65,30 @@ This will render your complete set of favicon-related icons:
 
 ### Cache key / revision number
 
-By default, `0.1.0` will be appended to the file names as a query string. If you update your icons, simply provide a new revision number and you're good to go:
+By default, `"?v=0.1.0"` will be appended to the file paths as a query string. If you update your icons, simply provide a new revision number and you're good to go:
 
 ```crystal
 favicon_tags app_name: "Lucky App", theme_color: "#00ff99", version: "0.2.0"
 ```
 
 ### Custom directory
-Whil it's not advisable to have your icons in a sub-dir, sometimes it may not be possible to have them there. In that case you can provide the name of the directory:
+While it's not advisable to have your icons in a sub-dir, sometimes it may not be possible to have them there. In that case you can provide the name of the directory:
 
 ```crystal
 favicon_tags app_name: "Lucky App", theme_color: "#00ff99", dir: "/icons"
 ```
 
 ### Individual tags
-Sometimes you may not want the whole set of link and meta tags. In that case you can use the individual methods, even each with custom arguments:
+If you don't want the whole set of meta and link tags, you can use the individual methods, each with custom arguments if required:
 
 ```crystal
 head do
   apple_touch_icon_tag dir: "/somewhere/else"
-  favicon_tags %w[24x24 64x64 128x128]
+  favicon_tags sizes: %w[24x24 64x64 128x128]
   site_webmanifest_tag version: "0.5.3"
-  safari_pinned_tab_tag "#00ff99"
-  application_name_tags "My App"
-  theme_color_tags "#ff0066"
+  safari_pinned_tab_tag theme_color: "#00ff99"
+  application_name_tags app_name: "My App"
+  theme_color_tags theme_color: "#ff0066"
 end
 ```
 
