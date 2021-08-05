@@ -88,7 +88,7 @@ If you don't want the whole set of meta and link tags, you can use the individua
 ```crystal
 head do
   apple_touch_icon_tag dir: "/somewhere/else"
-  favicon_tags sizes: %w[24x24 64x64 128x128]
+  favicon_icon_tags sizes: %w[24x24 64x64 128x128]
   site_webmanifest_tag version: "0.5.3"
   safari_pinned_tab_tag theme_color: "#00ff99"
   application_name_tags app_name: "My Lucky App"

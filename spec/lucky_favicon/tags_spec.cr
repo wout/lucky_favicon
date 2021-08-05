@@ -69,9 +69,9 @@ describe LuckyFavicon::Tags do
       end
     end
 
-    describe "#favicon_tags" do
+    describe "#favicon_icon_tags" do
       it "renders tags with defaut sizes" do
-        html = view(&.favicon_tags)
+        html = view(&.favicon_icon_tags)
 
         html.should contain <<-HTML
         <link rel="shortcut icon" href="/favicon.ico?v=0.1.0">
@@ -85,7 +85,7 @@ describe LuckyFavicon::Tags do
       end
 
       it "renders tags with custom sizes" do
-        html = view(&.favicon_tags(%w[24x24 64x64 128x128]))
+        html = view(&.favicon_icon_tags(%w[24x24 64x64 128x128]))
 
         html.should contain <<-HTML
         <link rel="shortcut icon" href="/favicon.ico?v=0.1.0">
@@ -197,9 +197,9 @@ describe LuckyFavicon::Tags do
       end
     end
 
-    describe "#favicon_tags" do
+    describe "#favicon_icon_tags" do
       it "renders tags with defaut sizes" do
-        html = view(&.favicon_tags(version: "1.2.3", dir: "/icons"))
+        html = view(&.favicon_icon_tags(version: "1.2.3", dir: "/icons"))
 
         html.should contain <<-HTML
         <link rel="shortcut icon" href="/icons/favicon.ico?v=1.2.3">

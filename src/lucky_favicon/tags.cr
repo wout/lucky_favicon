@@ -9,7 +9,7 @@ module LuckyFavicon::Tags
     dir : String? = nil
   ) : Nil
     apple_touch_icon_tag(version, dir)
-    favicon_tags(FAVICON_ICON_SIZES, version, dir)
+    favicon_icon_tags(FAVICON_ICON_SIZES, version, dir)
     site_webmanifest_tag(version, dir)
     safari_pinned_tab_tag(theme_color, version, dir)
     application_name_tags(app_name)
@@ -49,7 +49,7 @@ module LuckyFavicon::Tags
   # <link rel="shortcut icon" href="/favicon.ico?v=0.1.0">
   # <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=0.1.0">
   # <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=0.1.0">
-  def favicon_tags(
+  def favicon_icon_tags(
     sizes : Array(String) = FAVICON_ICON_SIZES,
     version : String? = nil,
     dir : String? = nil
