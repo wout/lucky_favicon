@@ -1,4 +1,4 @@
-# lucky_favicon
+# Lucky Favicon
 
 Add favicons from the [Real Favicon Generator](https://realfavicongenerator.net) to your Lucky project.
 
@@ -110,6 +110,10 @@ This will automatically:
 - run the relevant spec for any file in src
 - run spec file whenever they are saved
 - install shards whenever you save shard.yml
+
+## Documentation
+
+- [API (master)](https://wout.github.io/lucky_favicon)
 
 ## Contributing
 
