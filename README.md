@@ -33,7 +33,7 @@ require "lucky_favicon"
 
 And include the `LuckyFavicon::Tags` module:
 
-````crystal
+```crystal
 class Shared::LayoutHead < BaseComponent
   include LuckyFavicon::Tags
   ...
@@ -42,7 +42,7 @@ end
 
 Now you'll be able to add your icon set in your layout file:
 
-````crystal
+```crystal
 head do
   favicon_tags app_name: "Lucky App", theme_color: "#00ff99"
 end
