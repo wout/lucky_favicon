@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 1.0.0">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="lucky_favicon">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="lucky_favicon">
+  <title>LuckyFavicon::Tags - lucky_favicon main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          lucky_favicon
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="lucky_favicon/LuckyFavicon" data-name="luckyfavicon">
+      <a href="../LuckyFavicon.html">LuckyFavicon</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="lucky_favicon/LuckyFavicon/Tags" data-name="luckyfavicon::tags">
+      <a href="../LuckyFavicon/Tags.html">Tags</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> LuckyFavicon::Tags
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L1" target="_blank">
+        lucky_favicon/tags.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="FAVICON_ICON_SIZES">
+        <strong>FAVICON_ICON_SIZES</strong> = <code>[<span class="s">&quot;16x16&quot;</span>, <span class="s">&quot;32x32&quot;</span>] <span class="k">of</span> <span class="t">::</span><span class="t">String</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#apple_touch_icon_tag(version:String?=nil,dir:String?=nil):Nil-instance-method" class="signature"><strong>#apple_touch_icon_tag</strong>(version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil</a>
+        
+          <div class="summary"><p>Generates a apple-touch-icon link tag with a default size of 180x180:</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#application_name_tags(app_name:String):Nil-instance-method" class="signature"><strong>#application_name_tags</strong>(app_name : String) : Nil</a>
+        
+          <div class="summary"><p>Generates meta tags for the application name:</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#favicon_icon_path(icon:String,version:String?=nil,dir:String?=nil)-instance-method" class="signature"><strong>#favicon_icon_path</strong>(icon : String, version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>)</a>
+        
+          <div class="summary"><p>Builds the path to the given file.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#favicon_tags(app_name:String,theme_color:String,version:String?=nil,dir:String?=nil):Nil-instance-method" class="signature"><strong>#favicon_tags</strong>(app_name : String, theme_color : String, version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil</a>
+        
+          <div class="summary"><p>Generates a set of icon tags as suggested by https://realfavicongenerator.net/</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#favicon_tags(sizes:Array(String)=FAVICON_ICON_SIZES,version:String?=nil,dir:String?=nil):Nil-instance-method" class="signature"><strong>#favicon_tags</strong>(sizes : Array(String) = <span class="t">FAVICON_ICON_SIZES</span>, version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil</a>
+        
+          <div class="summary"><p>Generates the default .ico shortcut icon link tag and also a list for png favicon icons with a number of given sizes (most likely 16x16 and 32x32):</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#safari_pinned_tab_tag(theme_color:String,version:String?=nil,dir:String?=nil):Nil-instance-method" class="signature"><strong>#safari_pinned_tab_tag</strong>(theme_color : String, version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil</a>
+        
+          <div class="summary"><p>Generates a mask-icon link tag using the generated svg icon and the theme color for the backgound:</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#site_webmanifest_tag(version:String?=nil,dir:String?=nil):Nil-instance-method" class="signature"><strong>#site_webmanifest_tag</strong>(version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil</a>
+        
+          <div class="summary"><p>Generates a manifest link tag for the sit's web manifest:</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#theme_color_tags(theme_color:String)-instance-method" class="signature"><strong>#theme_color_tags</strong>(theme_color : String)</a>
+        
+          <div class="summary"><p>Generates meta tags for the global theme color, mostly used as a background to the base icon:</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="apple_touch_icon_tag(version:String?=nil,dir:String?=nil):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>apple_touch_icon_tag</strong>(version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil
+
+        <a class="method-permalink" href="#apple_touch_icon_tag(version:String?=nil,dir:String?=nil):Nil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Generates a apple-touch-icon link tag with a default size of 180x180:</p>
+
+<p>&lt;link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=0.1.0"></p>
+
+<p>Note: currently it only supports one icon with the fixed size of 180x180.
+This is also the default when generating the icon set.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L25" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="application_name_tags(app_name:String):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>application_name_tags</strong>(app_name : String) : Nil
+
+        <a class="method-permalink" href="#application_name_tags(app_name:String):Nil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Generates meta tags for the application name:</p>
+
+<p>&lt;meta name="apple-mobile-web-app-title" content="Lucky App">
+&lt;meta name="application-name" content="Lucky App"></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L81" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="favicon_icon_path(icon:String,version:String?=nil,dir:String?=nil)-instance-method">
+      <div class="signature">
+        
+        def <strong>favicon_icon_path</strong>(icon : String, version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#favicon_icon_path(icon:String,version:String?=nil,dir:String?=nil)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Builds the path to the given file.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L101" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="favicon_tags(app_name:String,theme_color:String,version:String?=nil,dir:String?=nil):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>favicon_tags</strong>(app_name : String, theme_color : String, version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil
+
+        <a class="method-permalink" href="#favicon_tags(app_name:String,theme_color:String,version:String?=nil,dir:String?=nil):Nil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Generates a set of icon tags as suggested by https://realfavicongenerator.net/</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L5" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="favicon_tags(sizes:Array(String)=FAVICON_ICON_SIZES,version:String?=nil,dir:String?=nil):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>favicon_tags</strong>(sizes : Array(String) = <span class="t">FAVICON_ICON_SIZES</span>, version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil
+
+        <a class="method-permalink" href="#favicon_tags(sizes:Array(String)=FAVICON_ICON_SIZES,version:String?=nil,dir:String?=nil):Nil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Generates the default .ico shortcut icon link tag and also a list for png
+favicon icons with a number of given sizes (most likely 16x16 and 32x32):</p>
+
+<p>&lt;link rel="shortcut icon" href="/favicon.ico?v=0.1.0">
+&lt;link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=0.1.0">
+&lt;link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=0.1.0"></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L52" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="safari_pinned_tab_tag(theme_color:String,version:String?=nil,dir:String?=nil):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>safari_pinned_tab_tag</strong>(theme_color : String, version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil
+
+        <a class="method-permalink" href="#safari_pinned_tab_tag(theme_color:String,version:String?=nil,dir:String?=nil):Nil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Generates a mask-icon link tag using the generated svg icon and the theme
+color for the backgound:</p>
+
+<p>&lt;link rel="mask-icon" href="/safari-pinned-tab.svg?v=0.1.0" color="#ff0066"></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L37" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="site_webmanifest_tag(version:String?=nil,dir:String?=nil):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>site_webmanifest_tag</strong>(version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil
+
+        <a class="method-permalink" href="#site_webmanifest_tag(version:String?=nil,dir:String?=nil):Nil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Generates a manifest link tag for the sit's web manifest:</p>
+
+<p>&lt;link rel="manifest" href="/site.webmanifest?v=0.1.0"></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L69" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="theme_color_tags(theme_color:String)-instance-method">
+      <div class="signature">
+        
+        def <strong>theme_color_tags</strong>(theme_color : String)
+
+        <a class="method-permalink" href="#theme_color_tags(theme_color:String)-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Generates meta tags for the global theme color, mostly used as a background
+to the base icon:</p>
+
+<p>&lt;meta name="msapplication-TileColor" content="#ff0066">
+&lt;meta name="theme-color" content="#ff0066"></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L93" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
