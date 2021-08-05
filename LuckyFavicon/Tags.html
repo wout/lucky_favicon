@@ -106,7 +106,7 @@
   </h2>
   
     
-      <a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L1" target="_blank">
+      <a href="https://github.com/wout/lucky_favicon/blob/2c7b4501777f5a2cf1f24350a59fbbc17a97ec04/src/lucky_favicon/tags.cr#L1" target="_blank">
         lucky_favicon/tags.cr
       </a>
     
@@ -172,16 +172,16 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#favicon_tags(app_name:String,theme_color:String,version:String?=nil,dir:String?=nil):Nil-instance-method" class="signature"><strong>#favicon_tags</strong>(app_name : String, theme_color : String, version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil</a>
+        <a href="#favicon_icon_tags(sizes:Array(String)=FAVICON_ICON_SIZES,version:String?=nil,dir:String?=nil):Nil-instance-method" class="signature"><strong>#favicon_icon_tags</strong>(sizes : Array(String) = <span class="t">FAVICON_ICON_SIZES</span>, version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil</a>
         
-          <div class="summary"><p>Generates a set of icon tags as suggested by https://realfavicongenerator.net/</p></div>
+          <div class="summary"><p>Generates the default .ico shortcut icon link tag and also a list for png favicon icons with a number of given sizes (most likely 16x16 and 32x32):</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#favicon_tags(sizes:Array(String)=FAVICON_ICON_SIZES,version:String?=nil,dir:String?=nil):Nil-instance-method" class="signature"><strong>#favicon_tags</strong>(sizes : Array(String) = <span class="t">FAVICON_ICON_SIZES</span>, version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil</a>
+        <a href="#favicon_tags(app_name:String,theme_color:String,version:String?=nil,dir:String?=nil):Nil-instance-method" class="signature"><strong>#favicon_tags</strong>(app_name : String, theme_color : String, version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil</a>
         
-          <div class="summary"><p>Generates the default .ico shortcut icon link tag and also a list for png favicon icons with a number of given sizes (most likely 16x16 and 32x32):</p></div>
+          <div class="summary"><p>Generates a set of icon tags as suggested by https://realfavicongenerator.net/</p></div>
         
       </li>
     
@@ -251,7 +251,7 @@ This is also the default when generating the icon set.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L25" target="_blank">View source</a>]
+          [<a href="https://github.com/wout/lucky_favicon/blob/2c7b4501777f5a2cf1f24350a59fbbc17a97ec04/src/lucky_favicon/tags.cr#L25" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -275,7 +275,7 @@ This is also the default when generating the icon set.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L81" target="_blank">View source</a>]
+          [<a href="https://github.com/wout/lucky_favicon/blob/2c7b4501777f5a2cf1f24350a59fbbc17a97ec04/src/lucky_favicon/tags.cr#L81" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -296,7 +296,33 @@ This is also the default when generating the icon set.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L101" target="_blank">View source</a>]
+          [<a href="https://github.com/wout/lucky_favicon/blob/2c7b4501777f5a2cf1f24350a59fbbc17a97ec04/src/lucky_favicon/tags.cr#L101" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="favicon_icon_tags(sizes:Array(String)=FAVICON_ICON_SIZES,version:String?=nil,dir:String?=nil):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>favicon_icon_tags</strong>(sizes : Array(String) = <span class="t">FAVICON_ICON_SIZES</span>, version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil
+
+        <a class="method-permalink" href="#favicon_icon_tags(sizes:Array(String)=FAVICON_ICON_SIZES,version:String?=nil,dir:String?=nil):Nil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Generates the default .ico shortcut icon link tag and also a list for png
+favicon icons with a number of given sizes (most likely 16x16 and 32x32):</p>
+
+<p>&lt;link rel="shortcut icon" href="/favicon.ico?v=0.1.0">
+&lt;link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=0.1.0">
+&lt;link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=0.1.0"></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/wout/lucky_favicon/blob/2c7b4501777f5a2cf1f24350a59fbbc17a97ec04/src/lucky_favicon/tags.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -317,33 +343,7 @@ This is also the default when generating the icon set.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L5" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="favicon_tags(sizes:Array(String)=FAVICON_ICON_SIZES,version:String?=nil,dir:String?=nil):Nil-instance-method">
-      <div class="signature">
-        
-        def <strong>favicon_tags</strong>(sizes : Array(String) = <span class="t">FAVICON_ICON_SIZES</span>, version : String? = <span class="n">nil</span>, dir : String? = <span class="n">nil</span>) : Nil
-
-        <a class="method-permalink" href="#favicon_tags(sizes:Array(String)=FAVICON_ICON_SIZES,version:String?=nil,dir:String?=nil):Nil-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Generates the default .ico shortcut icon link tag and also a list for png
-favicon icons with a number of given sizes (most likely 16x16 and 32x32):</p>
-
-<p>&lt;link rel="shortcut icon" href="/favicon.ico?v=0.1.0">
-&lt;link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=0.1.0">
-&lt;link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=0.1.0"></p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L52" target="_blank">View source</a>]
+          [<a href="https://github.com/wout/lucky_favicon/blob/2c7b4501777f5a2cf1f24350a59fbbc17a97ec04/src/lucky_favicon/tags.cr#L5" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -367,7 +367,7 @@ color for the backgound:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L37" target="_blank">View source</a>]
+          [<a href="https://github.com/wout/lucky_favicon/blob/2c7b4501777f5a2cf1f24350a59fbbc17a97ec04/src/lucky_favicon/tags.cr#L37" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -390,7 +390,7 @@ color for the backgound:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L69" target="_blank">View source</a>]
+          [<a href="https://github.com/wout/lucky_favicon/blob/2c7b4501777f5a2cf1f24350a59fbbc17a97ec04/src/lucky_favicon/tags.cr#L69" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -415,7 +415,7 @@ to the base icon:</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/wout/lucky_favicon/blob/828f9f608b41b18fde2ccc9b985891d62f92099a/src/lucky_favicon/tags.cr#L93" target="_blank">View source</a>]
+          [<a href="https://github.com/wout/lucky_favicon/blob/2c7b4501777f5a2cf1f24350a59fbbc17a97ec04/src/lucky_favicon/tags.cr#L93" target="_blank">View source</a>]
         
       </div>
     </div>

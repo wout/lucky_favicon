@@ -81,6 +81,10 @@
 
 <p>Add favicons from the <a href="https://realfavicongenerator.net">Real Favicon Generator</a> to your Lucky project.</p>
 
+<p><img src="https://img.shields.io/github/license/wout/lucky_favicon" alt="GitHub"/>
+<img src="https://img.shields.io/github/v/tag/wout/lucky_favicon" alt="GitHub tag (latest SemVer)"/>
+<img src="https://img.shields.io/github/workflow/status/wout/lucky_favicon/Lucky%20Favicon%20CI" alt="GitHub Workflow Status"/></p>
+
 <h2><a id="installation" class="anchor" href="#installation">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
@@ -170,7 +174,7 @@
 
 <pre><code class="language-crystal">head <span class="k">do</span>
   apple_touch_icon_tag dir: <span class="s">&quot;/somewhere/else&quot;</span>
-  favicon_tags sizes: <span class="s">%w[24x24 64x64 128x128]</span>
+  favicon_icon_tags sizes: <span class="s">%w[24x24 64x64 128x128]</span>
   site_webmanifest_tag version: <span class="s">&quot;0.5.3&quot;</span>
   safari_pinned_tab_tag theme_color: <span class="s">&quot;#00ff99&quot;</span>
   application_name_tags app_name: <span class="s">&quot;My Lucky App&quot;</span>
