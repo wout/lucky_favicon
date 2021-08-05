@@ -105,7 +105,7 @@
   </svg>
 </a>Usage</h2>
 
-<p>First, head over to the <a href="https://realfavicongenerator.net">Real Favicon Generator</a>, configure your icons and download the package. Unzip the package and place all the files in the public dir in you Lucky project. You can place them in a sub-dir but it has some drawbacks, as explained by the Real Favicon Generator:</p>
+<p>First, head over to the <a href="https://realfavicongenerator.net">Real Favicon Generator</a>, configure your icons and download the package. Unzip the package and place all the files in the public dir of your Lucky project. You can place them in a sub directory but it has some drawbacks, as explained by the Real Favicon Generator:</p>
 
 <blockquote>When generating a favicon with RealFaviconGenerator, the instructions ask you to place all files at the root of your web site. You may want to place them in a sub-directory, for example in http://mywebsite.com/icons/, just to make things clearer. However, there are three drawbacks with this approach:
 > 
@@ -118,14 +118,14 @@
 
 <pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;lucky_favicon&quot;</span></code></pre>
 
-<p>And include the <code><a href="LuckyFavicon/Tags.html">LuckyFavicon::Tags</a></code> module:</p>
+<p>And include the <code><a href="LuckyFavicon/Tags.html">LuckyFavicon::Tags</a></code> module wherever you want ot use it:</p>
 
 <pre><code class="language-crystal"><span class="k">class</span> <span class="t">Shared</span><span class="t">::</span><span class="t">LayoutHead</span> <span class="o">&lt;</span> <span class="t">BaseComponent</span>
   <span class="k">include</span> <span class="t">LuckyFavicon</span><span class="t">::</span><span class="t">Tags</span>
   ...
 <span class="k">end</span></code></pre>
 
-<p>Now you'll be able to add your icon set in your layout file:</p>
+<p>Now you'll be able to add your icon set with a single method:</p>
 
 <pre><code class="language-crystal">head <span class="k">do</span>
   favicon_tags app_name: <span class="s">&quot;Lucky App&quot;</span>, theme_color: <span class="s">&quot;#00ff99&quot;</span>
@@ -144,13 +144,13 @@
 &lt;meta name="msapplication-TileColor" content="#00ff99">
 &lt;meta name="theme-color" content="#00ff99"></code></pre>
 
-<h3><a id="cache-key-revision-number" class="anchor" href="#cache-key-revision-number">
+<h3><a id="cache-key-version-number" class="anchor" href="#cache-key-version-number">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
-</a>Cache key / revision number</h3>
+</a>Cache key / version number</h3>
 
-<p>By default, <code>"?v=0.1.0"</code> will be appended to the file paths as a query string. If you update your icons, simply provide a new revision number and you're good to go:</p>
+<p>By default, <code>"?v=0.1.0"</code> will be appended to the file paths as a query string. If you update your icons, simply provide a new version number and you're good to go:</p>
 
 <pre><code class="language-crystal">favicon_tags app_name: <span class="s">&quot;Lucky App&quot;</span>, theme_color: <span class="s">&quot;#00ff99&quot;</span>, version: <span class="s">&quot;0.2.0&quot;</span></code></pre>
 
@@ -160,7 +160,7 @@
   </svg>
 </a>Custom directory</h3>
 
-<p>While it's not advisable to have your icons in a sub-dir, sometimes it may not be possible to have them there. In that case you can provide the name of the directory:</p>
+<p>While it's not advisable to have your icons in a sub directory, sometimes it may not be possible to have them in the root of you public directory. In that case you can provide the name of the directory:</p>
 
 <pre><code class="language-crystal">favicon_tags app_name: <span class="s">&quot;Lucky App&quot;</span>, theme_color: <span class="s">&quot;#00ff99&quot;</span>, dir: <span class="s">&quot;/icons&quot;</span></code></pre>
 
