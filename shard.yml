@@ -1,0 +1,19 @@
+name: lucky_favicon
+version: 0.1.0
+
+authors:
+  - Wout <hi@wout.codes>
+
+crystal: ">= 1.0.0"
+
+license: MIT
+
+development_dependencies:
+  spec_mirror:
+    github: wout/spec_mirror.cr
+  ameba:
+    github: crystal-ameba/ameba
+    version: ~> 0.14.3
+  lucky:
+    github:  luckyframework/lucky
+    version: ~> 0.28
