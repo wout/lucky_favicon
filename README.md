@@ -2,6 +2,10 @@
 
 Add favicons from the [Real Favicon Generator](https://realfavicongenerator.net) to your Lucky project.
 
+![GitHub](https://img.shields.io/github/license/wout/lucky_favicon.cr)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/wout/lucky_favicon.cr)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/wout/lucky_favicon.cr/Lucky%20Favicon%20CI)
+
 ## Installation
 
 1. Add the dependency to your `shard.yml`:
