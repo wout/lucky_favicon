@@ -20,7 +20,7 @@ dependencies:
 
 ## Usage
 
-First, head over to the [Real Favicon Generator](https://realfavicongenerator.net), configure your icons and download the package. Unzip the package and place all the files in the public dir in you Lucky project. You can place them in a sub-dir but it has some drawbacks, as explained by the Real Favicon Generator:
+First, head over to the [Real Favicon Generator](https://realfavicongenerator.net), configure your icons and download the package. Unzip the package and place all the files in the public dir of your Lucky project. You can place them in a sub directory but it has some drawbacks, as explained by the Real Favicon Generator:
 
 > When generating a favicon with RealFaviconGenerator, the instructions ask you to place all files at the root of your web site. You may want to place them in a sub-directory, for example in http://mywebsite.com/icons/, just to make things clearer. However, there are three drawbacks with this approach:
 > 
@@ -35,7 +35,7 @@ Then, make sure your require this library in Lucky's shards.cr file:
 require "lucky_favicon"
 ```
 
-And include the `LuckyFavicon::Tags` module:
+And include the `LuckyFavicon::Tags` module wherever you want ot use it:
 
 ```crystal
 class Shared::LayoutHead < BaseComponent
@@ -44,7 +44,7 @@ class Shared::LayoutHead < BaseComponent
 end
 ```
 
-Now you'll be able to add your icon set in your layout file:
+Now you'll be able to add your icon set with a single method:
 
 ```crystal
 head do
@@ -67,16 +67,16 @@ This will render a complete set of favicon-related tags:
 <meta name="theme-color" content="#00ff99">
 ```
 
-### Cache key / revision number
+### Cache key / version number
 
-By default, `"?v=0.1.0"` will be appended to the file paths as a query string. If you update your icons, simply provide a new revision number and you're good to go:
+By default, `"?v=0.1.0"` will be appended to the file paths as a query string. If you update your icons, simply provide a new version number and you're good to go:
 
 ```crystal
 favicon_tags app_name: "Lucky App", theme_color: "#00ff99", version: "0.2.0"
 ```
 
 ### Custom directory
-While it's not advisable to have your icons in a sub-dir, sometimes it may not be possible to have them there. In that case you can provide the name of the directory:
+While it's not advisable to have your icons in a sub directory, sometimes it may not be possible to have them in the root of you public directory. In that case you can provide the name of the directory:
 
 ```crystal
 favicon_tags app_name: "Lucky App", theme_color: "#00ff99", dir: "/icons"
