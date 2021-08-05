@@ -19,6 +19,9 @@ module LuckyFavicon::Tags
   # Generates a apple-touch-icon link tag with a default size of 180x180:
   #
   # <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=0.1.0">
+  #
+  # Note: currently it only supports one icon with the fixed size of 180x180.
+  # This is also the default when generating the icon set.
   def apple_touch_icon_tag(
     version : String? = nil,
     dir : String? = nil
