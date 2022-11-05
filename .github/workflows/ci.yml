@@ -14,14 +14,10 @@ jobs:
         shard_file:
           - shard.yml
         crystal_version:
-          - 1.0.0
-          - 1.1.0
+          - 1.4.0
+          - latest
         experimental:
           - false
-        include:
-          - shard_file: shard.yml
-            crystal_version: nightly
-            experimental: true
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental }}
     env:
@@ -44,14 +40,10 @@ jobs:
         shard_file:
           - shard.yml
         crystal_version:
-          - 1.0.0
-          - 1.1.0
+          - latest
+          - 1.4.0
         experimental:
           - false
-        include:
-          - shard_file: shard.yml
-            crystal_version: nightly
-            experimental: true
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental }}
     env:
