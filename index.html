@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Crystal Docs 1.0.0">
+<meta name="generator" content="Crystal Docs 1.5.0">
 <meta name="crystal_docs.project_version" content="main">
 <meta name="crystal_docs.project_name" content="lucky_favicon">
 
@@ -73,105 +73,85 @@
 
 
 <div class="main-content">
-<h1><a id="lucky-favicon" class="anchor" href="#lucky-favicon">
-  <svg class="octicon-link" aria-hidden="true">
+<h1><a id="lucky-favicon" class="anchor" href="#lucky-favicon">  <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Lucky Favicon</h1>
-
 <p>Add favicons from the <a href="https://realfavicongenerator.net">Real Favicon Generator</a> to your Lucky project.</p>
-
-<p><img src="https://img.shields.io/github/license/wout/lucky_favicon" alt="GitHub"/>
-<img src="https://img.shields.io/github/v/tag/wout/lucky_favicon" alt="GitHub tag (latest SemVer)"/>
-<img src="https://img.shields.io/github/workflow/status/wout/lucky_favicon/Lucky%20Favicon%20CI" alt="GitHub Workflow Status"/></p>
-
+<p><img src="https://img.shields.io/github/license/wout/lucky_favicon" alt="GitHub" />
+<img src="https://img.shields.io/github/v/tag/wout/lucky_favicon" alt="GitHub tag (latest SemVer)" />
+<img src="https://img.shields.io/github/workflow/status/wout/lucky_favicon/Lucky%20Favicon%20CI" alt="GitHub Workflow Status" /></p>
 <h2><a id="installation" class="anchor" href="#installation">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Installation</h2>
-
-<ol><li>Add the dependency to your <code>shard.yml</code>:</li></ol>
-
+<ol>
+<li>Add the dependency to your <code>shard.yml</code>:</li>
+</ol>
 <pre><code class="language-yaml">dependencies:
   lucky_favicon:
     github: wout/lucky_favicon</code></pre>
-
-<ol><li>Run <code>shards install</code></li></ol>
-
+<ol start="2">
+<li>Run <code>shards install</code></li>
+</ol>
 <h2><a id="usage" class="anchor" href="#usage">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Usage</h2>
-
 <p>First, head over to the <a href="https://realfavicongenerator.net">Real Favicon Generator</a>, configure your icons and download the package. Unzip the package and place all the files in the public dir of your Lucky project. You can place them in a sub directory but it has some drawbacks, as explained by the Real Favicon Generator:</p>
-
-<blockquote>When generating a favicon with RealFaviconGenerator, the instructions ask you to place all files at the root of your web site. You may want to place them in a sub-directory, for example in http://mywebsite.com/icons/, just to make things clearer. However, there are three drawbacks with this approach:
-> 
-> - Internet Explorer looks for favicon.ico at the root of the web site. Granted: this is because we ask you to not declare favicon.ico.
-> - iOS devices look for files such as apple-touch-icon-144x144.png at the root of the web site, as described by Apple. This issue can be mitigated by declaring the icons in the HTML code (this is necessary for Android anyway), but following Apple conventions is probably the best move.
-> - By default, Internet Explorer 11 looks for browserconfig.xml at the root of the web site.
-> - Several services, such as Yandex, look for favicon.ico in the root directory. </blockquote>
-
+<blockquote>
+<p>When generating a favicon with RealFaviconGenerator, the instructions ask you to place all files at the root of your web site. You may want to place them in a sub-directory, for example in http://mywebsite.com/icons/, just to make things clearer. However, there are three drawbacks with this approach:</p>
+<ul>
+<li>Internet Explorer looks for favicon.ico at the root of the web site. Granted: this is because we ask you to not declare favicon.ico.</li>
+<li>iOS devices look for files such as apple-touch-icon-144x144.png at the root of the web site, as described by Apple. This issue can be mitigated by declaring the icons in the HTML code (this is necessary for Android anyway), but following Apple conventions is probably the best move.</li>
+<li>By default, Internet Explorer 11 looks for browserconfig.xml at the root of the web site.</li>
+<li>Several services, such as Yandex, look for favicon.ico in the root directory.</li>
+</ul>
+</blockquote>
 <p>Then, make sure your require this library in Lucky's shards.cr file:</p>
-
 <pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;lucky_favicon&quot;</span></code></pre>
-
 <p>And include the <code><a href="LuckyFavicon/Tags.html">LuckyFavicon::Tags</a></code> module wherever you want ot use it:</p>
-
 <pre><code class="language-crystal"><span class="k">class</span> <span class="t">Shared</span><span class="t">::</span><span class="t">LayoutHead</span> <span class="o">&lt;</span> <span class="t">BaseComponent</span>
   <span class="k">include</span> <span class="t">LuckyFavicon</span><span class="t">::</span><span class="t">Tags</span>
   ...
 <span class="k">end</span></code></pre>
-
 <p>Now you'll be able to add your icon set with a single method:</p>
-
 <pre><code class="language-crystal">head <span class="k">do</span>
   favicon_tags app_name: <span class="s">&quot;Lucky App&quot;</span>, theme_color: <span class="s">&quot;#00ff99&quot;</span>
 <span class="k">end</span></code></pre>
-
 <p>This will render a complete set of favicon-related tags:</p>
-
-<pre><code class="language-html">&lt;link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=0.1.0">
-&lt;link rel="mask-icon" color="#00ff99" href="/safari-pinned-tab.svg?v=0.1.0">
-&lt;link rel="shortcut icon" href="/favicon.ico?v=0.1.0">
-&lt;link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=0.1.0">
-&lt;link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=0.1.0">
-&lt;link rel="manifest" href="/site.webmanifest?v=0.1.0">
-&lt;meta name="apple-mobile-web-app-title" content="Lucky App">
-&lt;meta name="application-name" content="Lucky App">
-&lt;meta name="msapplication-TileColor" content="#00ff99">
-&lt;meta name="theme-color" content="#00ff99"></code></pre>
-
+<pre><code class="language-html">&lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;180x180&quot; href=&quot;/apple-touch-icon.png?v=0.1.0&quot;&gt;
+&lt;link rel=&quot;mask-icon&quot; color=&quot;#00ff99&quot; href=&quot;/safari-pinned-tab.svg?v=0.1.0&quot;&gt;
+&lt;link rel=&quot;shortcut icon&quot; href=&quot;/favicon.ico?v=0.1.0&quot;&gt;
+&lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;16x16&quot; href=&quot;/favicon-16x16.png?v=0.1.0&quot;&gt;
+&lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;32x32&quot; href=&quot;/favicon-32x32.png?v=0.1.0&quot;&gt;
+&lt;link rel=&quot;manifest&quot; href=&quot;/site.webmanifest?v=0.1.0&quot;&gt;
+&lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Lucky App&quot;&gt;
+&lt;meta name=&quot;application-name&quot; content=&quot;Lucky App&quot;&gt;
+&lt;meta name=&quot;msapplication-TileColor&quot; content=&quot;#00ff99&quot;&gt;
+&lt;meta name=&quot;theme-color&quot; content=&quot;#00ff99&quot;&gt;</code></pre>
 <h3><a id="cache-key-version-number" class="anchor" href="#cache-key-version-number">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Cache key / version number</h3>
-
-<p>By default, <code>"?v=0.1.0"</code> will be appended to the file paths as a query string. If you update your icons, simply provide a new version number and you're good to go:</p>
-
+<p>By default, <code>&quot;?v=0.1.0&quot;</code> will be appended to the file paths as a query string. If you update your icons, simply provide a new version number and you're good to go:</p>
 <pre><code class="language-crystal">favicon_tags app_name: <span class="s">&quot;Lucky App&quot;</span>, theme_color: <span class="s">&quot;#00ff99&quot;</span>, version: <span class="s">&quot;0.2.0&quot;</span></code></pre>
-
 <h3><a id="custom-directory" class="anchor" href="#custom-directory">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Custom directory</h3>
-
 <p>While it's not advisable to have your icons in a sub directory, sometimes it may not be possible to have them in the root of you public directory. In that case you can provide the name of the directory:</p>
-
 <pre><code class="language-crystal">favicon_tags app_name: <span class="s">&quot;Lucky App&quot;</span>, theme_color: <span class="s">&quot;#00ff99&quot;</span>, dir: <span class="s">&quot;/icons&quot;</span></code></pre>
-
 <h3><a id="individual-tags" class="anchor" href="#individual-tags">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Individual tags</h3>
-
 <p>If you don't want the whole set of meta and link tags, you can use the individual methods, each with custom arguments if required:</p>
-
 <pre><code class="language-crystal">head <span class="k">do</span>
   apple_touch_icon_tag dir: <span class="s">&quot;/somewhere/else&quot;</span>
   favicon_icon_tags sizes: <span class="s">%w[24x24 64x64 128x128]</span>
@@ -180,45 +160,49 @@
   application_name_tags app_name: <span class="s">&quot;My Lucky App&quot;</span>
   theme_color_tags theme_color: <span class="s">&quot;#ff0066&quot;</span>
 <span class="k">end</span></code></pre>
-
 <h2><a id="development" class="anchor" href="#development">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Development</h2>
-
 <p>Make sure you have <a href="https://github.com/f/guardian">Guardian.cr</a> installed. Then
 run:</p>
-
 <pre><code class="language-bash">$ guardian</code></pre>
-
 <p>This will automatically:</p>
-
-<ul><li>run ameba for src and spec files</li><li>run the relevant spec for any file in src</li><li>run spec file whenever they are saved</li><li>install shards whenever you save shard.yml</li></ul>
-
+<ul>
+<li>run ameba for src and spec files</li>
+<li>run the relevant spec for any file in src</li>
+<li>run spec file whenever they are saved</li>
+<li>install shards whenever you save shard.yml</li>
+</ul>
 <h2><a id="documentation" class="anchor" href="#documentation">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Documentation</h2>
-
-<ul><li><a href="https://wout.github.io/lucky_favicon">API (master)</a></li></ul>
-
+<ul>
+<li><a href="https://wout.github.io/lucky_favicon">API (master)</a></li>
+</ul>
 <h2><a id="contributing" class="anchor" href="#contributing">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Contributing</h2>
-
-<ol><li>Fork it (&lt;https://github.com/wout/lucky_favicon/fork>)</li><li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li><li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li><li>Push to the branch (<code>git push origin my-new-feature</code>)</li><li>Create a new Pull Request</li></ol>
-
+<ol>
+<li>Fork it (<a href="https://github.com/wout/lucky_favicon/fork">https://github.com/wout/lucky_favicon/fork</a>)</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create a new Pull Request</li>
+</ol>
 <h2><a id="contributors" class="anchor" href="#contributors">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
 </a>Contributors</h2>
-
-<ul><li><a href="https://github.com/wout">wout</a> - creator and maintainer</li></ul>
+<ul>
+<li><a href="https://github.com/wout">wout</a> - creator and maintainer</li>
+</ul>
 </div>
 </body>
 </html>
