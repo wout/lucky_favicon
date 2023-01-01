@@ -4,7 +4,7 @@ Add favicons from the [Real Favicon Generator](https://realfavicongenerator.net)
 
 ![GitHub](https://img.shields.io/github/license/wout/lucky_favicon)
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/wout/lucky_favicon)
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/wout/lucky_favicon/Lucky%20Favicon%20CI)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/wout/lucky_favicon/ci.yml?branch=main)
 
 ## Installation
 
