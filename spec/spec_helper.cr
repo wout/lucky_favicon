@@ -1,4 +1,4 @@
 require "spec"
 require "lucky"
-require "./helpers/**"
+require "./support/**"
 require "../src/lucky_favicon/**"
