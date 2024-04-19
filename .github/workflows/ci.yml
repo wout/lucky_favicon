@@ -14,7 +14,6 @@ jobs:
         shard_file:
           - shard.yml
         crystal_version:
-          - 1.4.0
           - latest
         experimental:
           - false
@@ -41,7 +40,6 @@ jobs:
           - shard.yml
         crystal_version:
           - latest
-          - 1.4.0
         experimental:
           - false
     runs-on: ubuntu-latest
