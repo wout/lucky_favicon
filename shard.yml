@@ -9,8 +9,6 @@ crystal: ">= 1.6.0"
 license: MIT
 
 development_dependencies:
-  spec_mirror:
-    github: wout/spec_mirror.cr
   ameba:
     github: crystal-ameba/ameba
   lucky:
