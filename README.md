@@ -89,7 +89,7 @@ end
 
 ## Documentation
 
-- [API (master)](https://wout.github.io/lucky_favicon)
+- [API (main)](https://wout.github.io/lucky_favicon)
 
 ## Contributing
 
