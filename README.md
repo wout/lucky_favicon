@@ -20,6 +20,10 @@ dependencies:
 
 ## Usage
 
+**IMPORTANT**: Version 1.0.0 introduces a breaking change and uses the new,
+simplified icon set. If you're upgrading, from 0.x.x, make sure to generate a
+new icon package.
+
 First, head over to the [Real Favicon Generator](https://realfavicongenerator.net), configure your icons and download the package. Unzip the package and place all the files in the public dir of your Lucky project, or in whichever subdirectory you configured when generating the set. 
 
 Then, make sure you require this library in Lucky's `shards.cr` file:
