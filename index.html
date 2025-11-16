@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Crystal Docs 1.16.3">
+<meta name="generator" content="Crystal Docs 1.17.1">
 <meta name="crystal_docs.project_version" content="main">
 <meta name="crystal_docs.project_name" content="lucky_favicon">
 
@@ -106,9 +106,12 @@
     <use href="#octicon-link"/>
   </svg>
 </a>Usage</h2>
-<p><strong>IMPORTANT</strong>: Version 1.0.0 introduces a breaking change and uses the new,
+<blockquote>
+<p>[!WARNING]
+Version 1.0.0 introduces a breaking change and uses the new,
 simplified icon set. If you're upgrading, from 0.x.x, make sure to generate a
 new icon package.</p>
+</blockquote>
 <p>First, head over to the <a href="https://realfavicongenerator.net">Real Favicon Generator</a>, configure your icons and download the package. Unzip the package and place all the files in the public dir of your Lucky project, or in whichever subdirectory you configured when generating the set.</p>
 <p>Then, make sure you require this library in Lucky's <code>shards.cr</code> file:</p>
 <pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;lucky_favicon&quot;</span></code></pre>
