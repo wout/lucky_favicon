@@ -20,11 +20,12 @@ dependencies:
 
 ## Usage
 
-**IMPORTANT**: Version 1.0.0 introduces a breaking change and uses the new,
-simplified icon set. If you're upgrading, from 0.x.x, make sure to generate a
-new icon package.
+> [!WARNING]
+> Version 1.0.0 introduces a breaking change and uses the new,
+> simplified icon set. If you're upgrading, from 0.x.x, make sure to generate a
+> new icon package.
 
-First, head over to the [Real Favicon Generator](https://realfavicongenerator.net), configure your icons and download the package. Unzip the package and place all the files in the public dir of your Lucky project, or in whichever subdirectory you configured when generating the set. 
+First, head over to the [Real Favicon Generator](https://realfavicongenerator.net), configure your icons and download the package. Unzip the package and place all the files in the public dir of your Lucky project, or in whichever subdirectory you configured when generating the set.
 
 Then, make sure you require this library in Lucky's `shards.cr` file:
 
@@ -69,6 +70,7 @@ favicon_tags app_name: "Lucky App", version: "0.2.0"
 ```
 
 ### Custom directory
+
 While it's not advisable to have your icons in a subdirectory, sometimes it may not be possible to have them in the root of you public directory. In that case you can provide the name of the directory:
 
 ```crystal
@@ -76,6 +78,7 @@ favicon_tags app_name: "Lucky App", dir: "/icons"
 ```
 
 ### Individual tags
+
 If you don't want the whole set of meta and link tags, you can use the individual methods, each with custom arguments if required:
 
 ```crystal
